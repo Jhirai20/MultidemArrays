@@ -50,7 +50,37 @@ namespace MultidemArrays
                 // Accessing a jagged array
                 Console.WriteLine(jaggedArray2[0][1]); // 3
                 Console.WriteLine(jaggedArray3[2][3]); // 44
-
+            //Multiplication Table
+                int [,] array10D = new int[10,10];
+                for (int x =0; x<10;x++)
+                {
+                    for (int y = 0; y < 10; y++)
+                        {
+                            array10D[x,y]=(y+1)*(x+1);
+                        }
+                }
+                for (int x =0; x<10;x++)
+                    {
+                        Console.Write("[");
+                        for (int y = 0; y < 10; y++)
+                            {
+                                if (y!=9)
+                                {
+                                    Console.Write(array10D[x,y]+",");
+                                }
+                                if (y==9)
+                                {
+                                    Console.Write(array10D[x,y]);
+                                }
+                                
+                                if (y==9)
+                                {
+                                    Console.Write("]");
+                                    Console.WriteLine();
+                                }
+                            }
+                        
+                    }
         }
     }
 }
